@@ -77,34 +77,39 @@ export const productData = {
         {
           id: 'a12',
           text: 'Vinyl',
-          nextQuestion: 'q13'
+          productId: 'vinylShutters'
         },
         {
           id: 'a13',
           text: 'Composite',
-          nextQuestion: 'q14'
+          productId: 'compositeShutters'
         },
         {
           id: 'a14',
           text: '100% Wood',
-          nextQuestion: 'q15'
+          productId: 'woodShutters'
         }
       ]
     },
     q5: {
       id: 'q5',
-      text: 'Skylift Motorized',
+      text: 'Moves inside a Skylight',
       type: 'single',
       answers: [
         {
+            id: 'a15a',
+            text: 'Skylift Motorized',
+            productId: 'skyliftMotorized'
+        },        
+        {
           id: 'a15',
           text: 'Skylift Manual',
-          nextQuestion: 'q16'
+          productId: 'manualSkylightShutters'
         },
         {
           id: 'a16',
           text: 'Simplicity Manual',
-          nextQuestion: 'q17'
+          productId: 'simplicitySkylightShutters'
         }
       ]
     },
@@ -148,12 +153,12 @@ export const productData = {
         {
           id: 'a22',
           text: 'Real Wood',
-          nextQuestion: 'q22'
+          productId: 'parklandWoodBlinds'
         },
         {
           id: 'a23',
           text: 'Faux Wood',
-          nextQuestion: 'q23'
+          productId: 'everwoodFauxWoodBlinds'
         }
       ]
     },
@@ -170,76 +175,48 @@ export const productData = {
         {
           id: 'a28',
           text: 'Fabric is a single pane',
-          nextQuestion: 'q25'
+          nextQuestion: 'q13'
         }
       ]
-    },
-    //reuse?
-    q10: {
-      id: 'q10',
-      text: 'What is your budget for a gaming desktop?',
-      type: 'single',
-      answers: [
-        {
-          id: 'a30',
-          text: 'Under $1500',
-          productId: 'product19'
-        },
-        {
-          id: 'a31',
-          text: '$1500 - $3000',
-          productId: 'product20'
-        },
-        {
-          id: 'a32',
-          text: 'Over $3000',
-          productId: 'product21'
-        }
-      ]
-    },
+    },    
     q11: {
       id: 'q11',
-      text: 'Wood',
+      text: 'Does your product have large wood panels that slide on a track or Wood Vanes that hang from a track',
       type: 'single',
       answers: [
         {
           id: 'a33',
-          text: 'Does your product have large wood panels that slide on a track or Wood Vanes that hang from a track?',
-          a50: 'product22'
+          text: 'Large Panels that slide on a track',   
+          nextQuestion: 'q25'
         },
         {
           id: 'a34',
-          text: '3D Rendering/Animation',
-          productId: 'product23'
-        },
-        {
-          id: 'a35',
-          text: 'Data Science/AI',
-          productId: 'product24'
+          text: 'It\'s wood panels but its not on a track',
+          nextQuestion: 'q26'
         }
       ]
-    },
-    q12: {
-      id: 'q12',
-      text: 'What is your budget for a home office desktop?',
-      type: 'single',
-      answers: [
-        {
-          id: 'a36',
-          text: 'Under $800',
-          productId: 'product25'
-        },
-        {
-          id: 'a37',
-          text: '$800 - $1500',
-          productId: 'product26'
-        },
-        {
-          id: 'a38',
-          text: 'Over $1500',
-          productId: 'product27'
-        }
-      ]
+    },    
+    q13: {
+        id: 'q13',
+        text: 'Fabric/Vinyl',
+        type: 'single',
+        answers: [
+            {
+                id: 'a53',
+                text: 'I have sheer drapery style fabric',
+                productId: 'luminetteFabric'
+            },
+            {
+                id: 'a54',
+                text: 'I have cellular honeycomb fabric',
+                productId: 'honeycombVertiglide'
+            },
+            {
+                id: 'a55',
+                text: 'I have woven wood drapery style fabric',
+                productId: 'wovenWoodDraperyFabric'
+            }
+        ]
     },
     q17a: {
       id: 'q17a',
@@ -271,12 +248,12 @@ export const productData = {
             {
                 id: 'a43',
                 text: 'I have Sonnette Fabric',
-                productId: 'sonnetteRollerShades'
+                productId: 'sonnetteFabric'
             },
             {
                 id: 'a44',
                 text: 'I have Designer Banded Fabric',
-                productId: 'designerBandedFabric'
+                productId: 'designerBandedRollerShades'
             }
         ]
     },
@@ -305,7 +282,7 @@ export const productData = {
             {
                 id: 'a47',
                 text: 'I have S-Shaped fabric vane between sheers',
-                productId: 'sShapedFabricVaneBetweenSheers'
+                productId: 'sshapedFabricVaneBetweenSheers'
             },
             {
                 id: 'a48',
@@ -321,237 +298,159 @@ export const productData = {
     },   
     q24: {
       id: 'q24',
-      text: 'I have small vanes fabric or vinyl',
+      text: 'Does the fabric look similar to the image?',
       type: 'single',
       answers: [
-        {
+        {            
           id: 'a39',
-          text: 'You have Vertical Blinds!',
+          text: 'I have small vanes fabric or vinyl',
           productId: 'verticalBlinds'
+        },
+        {
+            id: 'a52',
+            text: 'I have large vertical panels on a track',
+            productId: 'panelTrackBlinds'
         }
         ]
-  },
+    },
+    q25: {
+        id: 'q25',
+        text: 'Does your product look similar to the image below?',
+        type: 'single',
+        answers: [
+            {
+                id: 'a50',
+                text: 'Yes',
+            },
+            {
+                id: 'a51',
+                text: 'No',
+
+            }
+        ]
+        },
+},
   products: {
+    panelTrackBlinds: {
+      id: 'panelTrackBlinds',
+      name: 'Skyline® Panel-Track Blinds',
+      description: 'You have Skyline® Panel-Track Blinds! Sleek gliding panels. A contemporary feel. Creating a dramatic backdrop for short, tall or wide windows.',
+      features: ['Sleek gliding panels', 'A contemporary feel', 'Creating a dramatic backdrop for short, tall or wide windows']
+    },
+    luminetteFabric: {
+      id: 'luminetteFabric',
+      name: 'Luminette Sheer Panels',
+      description: 'You have Luminette Sheer Panels! Drapery-like sheers exude a soft glow. Distinctly designed to control light while creating privacy.',
+      features: ['Drapery-like sheers exude a soft glow', 'Distinctly designed to control light while creating privacy']
+    },
+    honeycombVertiglide: {
+      id: 'honeycombVertiglide',
+      name: 'Honeycomb Vertiglide',
+      description: 'You have Honeycomb Vertiglide! An ideal choice for vertical side-to-side openings, sliding-glass doors or as room dividers, Vertiglide is available as a child-safe, cordless operating system on our Duette® and Applause® Honeycomb Shades.',
+      features: ['An ideal choice for vertical side-to-side openings, sliding-glass doors or as room dividers', 'Vertiglide is available as a child-safe, cordless operating system on our Duette® and Applause® Honeycomb Shades']
+    },
+    wovenWoodDraperyFabric: {
+      id: 'wovenWoodDraperyFabric',
+      name: 'Provenance Woven Wood Drapery Shades',
+      description: 'You have Provenance Woven Wood Drapery Shades! Artisanal, artistically woven wood. Infusing organic style and texture into a room.',
+      features: ['Artisanal, artistically woven wood', 'Infusing organic style and texture into a room']
+    },
+    pirSheerShades: {
+      id: 'pirSheerShades',
+      name: 'Pirouette® Sheer Shades',
+      description: 'You have Pirouette® Sheer Shade! Soft fabric vanes whose shape changes on demand. Controlling light in a magical new way.',
+      features: ['Soft fabric vanes whose shape changes on demand', 'Controlling light in a magical new way']
+    },
+    sshapedFabricVaneBetweenSheers: {
+      id: 'sshapedFabricVaneBetweenSheers',
+      name: 'Silhouette® Sheer Shades',
+      description: 'You have Silhouette® Sheer Shades! S-shaped fabric vanes float between sheers. For gorgeous, diffused light, along with daytime privacy.',
+      features: ['Gorgeous, diffused light', 'Daytime privacy']
+    },
+    fabricRomanShade: {
+      id: 'fabricRomanShade',
+      name: 'Fabric Roman Shade',
+      description: 'You have Roman Shades! Elegantly tailored. In flat or full folds. Transforming light, for a more alluring space.',
+      features: ['Elegantly tailored', 'In flat or full folds', 'Transforming light, for a more alluring space']
+    },
+    wovenWoodRomanShade: {
+      id: 'wovenWoodRomanShade',
+      name: 'Provenance Woven Wood Shades',
+      description: 'You have Provenance Woven Wood Shades! Artisanal, artistically woven wood. Infusing organic style and texture into a room.',
+      features: ['Artisanal, artistically woven wood', 'Infusing organic style and texture into a room']
+    },
+    designerBandedRollerShades: {
+      id: 'designerBandedRollerShades',
+      name: 'Designer Banded Roller Shades',
+      description: 'You have Designer Banded Roller Shades! Modern, layered, sheer and solid fabrics. For a view when you want it. And privacy when you need it.',
+      features: ['Modern, layered, sheer and solid fabrics', 'For a view when you want it. And privacy when you need it']
+    },
+    rollerScreenFabric: {
+      id: 'rollerScreenFabric',
+      name: 'Roller Shades',
+      description: 'You have Roller Shades! A clean, minimal design perfect for any room. Solar shades Helps curb harsh UV rays while preserving views to the outside.',
+      features: ['Clean, minimal design', 'Solar shades Helps curb harsh UV rays while preserving views to the outside']
+    },
+    skyliftMotorized: {
+      id: 'skyliftMotorized',
+      name: 'Duette® and Applause Cellular with Skylift™ Shades',
+      description: 'You have Duette® and Applause Cellular with Skylift™ Shades! Skylift™ skylight system, available on our Duette® and Applause® Honeycomb Shades, is specifically suited for skylights. Choose PowerView® Automation for these shades, or manual operation with a hand crank or telescoping pole for hard-to-reach windows. Either way, the SkyLift system is perfect for very large, overhead windows.',
+      features: ['Skylift™ skylight system', 'PowerView® Automation', 'Manual operation with a hand crank or telescoping pole for hard-to-reach windows']
+    },
+    manualSkylightShutters: {
+      id: 'manualSkylightShutters',
+      name: 'Duette® and Applause Cellular with Skylift™ Shades',
+      description: 'You have Duette® and Applause Cellular with Skylift™ Shades! Skylift™ skylight system, available on our Duette® and Applause® Honeycomb Shades, is specifically suited for skylights. Choose PowerView® Automation for these shades, or manual operation with a hand crank or telescoping pole for hard-to-reach windows. Either way, the SkyLift system is perfect for very large, overhead windows.',
+      features: ['Skylift™ skylight system', 'PowerView® Automation', 'Manual operation with a hand crank or telescoping pole for hard-to-reach windows']
+    },
+    simplicitySkylightShutters: {
+      id: 'simplicitySkylightShutters',
+      name: 'Duette® and Applause Cellular with Simplicity™ System Shades',
+      description: 'You have Duette® and Applause Cellular with Simplicity™ System Shades! Simplicity™ is a manual operating system for skylights that is available for vertical or horizontal orientation and can stack in any direction.',
+      features: ['Simplicity™ is a manual operating system for skylights that is available for vertical or horizontal orientation and can stack in any direction']
+    },
+    everwoodFauxWoodBlinds: {
+      id: 'everwoodFauxWoodBlinds',
+      name: 'Everwood® Faux Wood Blinds',
+      description: 'You have Everwood® Faux Wood Blinds! Outstanding durability. Classic good looks. Rich, alternative wood that stands up to the elements.',
+      features: ['Outstanding durability', 'Classic good looks', 'Rich, alternative wood that stands up to the elements']
+    },
+    parklandWoodBlinds: {   
+      id: 'parklandWoodBlinds', 
+      name: 'Parkland Wood Blinds',
+      description: 'You have Parkland® Wood Blinds! Real wood in rich colors, paints and stains. Fashioned to create a warm and inviting look.',
+      features: ['Real wood in rich colors, paints and stains', 'Fashioned to create a warm and inviting look']
+    },
     ariaFabricBlinds: {
       id: 'ariaFabricBlinds',
-      name: 'Aria Fabric Blinds',
-      description: 'Great Choice!  You have Duette® and Applause Cellular Shades. Lightweight and translucent for diffusing sunlight into a beautiful glow.',
+      name: 'Duette® and Applause Cellular Shades',
+      description: 'You have Duette® and Applause Cellular Shades. Lightweight and translucent for diffusing sunlight into a beautiful glow.',
       features: ['Sleek, modern look', 'Versatile option for any space']
     },
     honeycombCellularShades: {
       id: 'honeycombCellularShades',
-      name: 'Honeycomb/Cellular Shades',
-      description: 'Great Choice!  You have Duette® and Applause Cellular Shades.  Year-round comfort. Beautiful natural light. Through stunning, energy-efficient, honeycomb shades.',
+      name: 'Duette® and Applause Cellular Shades',
+      description: 'You have Duette® and Applause Cellular Shades.  Year-round comfort. Beautiful natural light. Through stunning, energy-efficient, honeycomb shades.',
       features: ['Year-round comfort', 'Beautiful natural light', 'Stunning, energy-efficient, honeycomb shades']
     },
     sonnetteFabric: {
       id: 'sonnetteFabric',
-      name: 'Sonnette Fabric',  
-      description: 'Great Choice!  You have Sonnette® Roller Shades! A cellular shade and a roller shade, paired together. For a fresh take on style and energy efficiency.',
+      name: 'Sonnette® Roller Shades',  
+      description: 'You have Sonnette® Roller Shades! A cellular shade and a roller shade, paired together. For a fresh take on style and energy efficiency.',
       features: ['Sonnette Fabric']
     },
     verticalBlinds: {
       id: 'verticalBlinds',
       name: 'Vertical Blinds',
-      description: 'We offer a few types of Vertical products: Somner Vertical Blinds - Vinyl, fabric and aluminum styles in many colors and finishes. For vertical blinds that make a statement. Vertical Solutions® Vertical Blinds- Essential fabric and vinyl options with a minimalist design. So art and furniture can take center stage!',
-      features: ['Vertical Blinds']
+      description: 'You have Vertical Blinds! We offer a few types of Vertical products: Somner Vertical Blinds - Vinyl, fabric and aluminum styles in many colors and finishes. For vertical blinds that make a statement. Vertical Solutions® Vertical Blinds- Essential fabric and vinyl options with a minimalist design. So art and furniture can take center stage!',
+      features: ['Vinyl, fabric and aluminum styles in many colors and finishes', 'For vertical blinds that make a statement', 'Essential fabric and vinyl options with a minimalist design', 'So art and furniture can take center stage!']
     },
     udMetal: {
       id: 'udMetal',
       name: 'Modern Precious Metals® Mini Blinds',
-      description: 'Great Choice! You have Modern Precious Metals® Mini Blinds  Sleek aluminum slats.  A streamlined, durable aesthetic.  An appealing option for high-traffic homes.  ',
+      description: 'You have Modern Precious Metals® Mini Blinds  Sleek aluminum slats.  A streamlined, durable aesthetic.  An appealing option for high-traffic homes.  ',
       features: ['Aluminum slats', 'Streamlined, durable aesthetic', 'Appealing option for high-traffic homes']
-    },
-    product1: {
-      id: 'product1',
-      name: 'Compact Tablet 8"',
-      description: 'Perfect for reading and light tasks. Compact and portable with excellent battery life.',
-      price: '$199',
-      features: ['8" Display', '64GB Storage', '10-hour battery', 'Lightweight design']
-    },
-    product2: {
-      id: 'product2',
-      name: 'Standard Tablet 10.5"',
-      description: 'Ideal for productivity and entertainment. Great balance of size and portability.',
-      price: '$399',
-      features: ['10.5" Display', '128GB Storage', '12-hour battery', 'Stylus support']
-    },
-    product3: {
-      id: 'product3',
-      name: 'Large Tablet 12.9"',
-      description: 'Professional-grade tablet for creative work and productivity. Large, vibrant display.',
-      price: '$799',
-      features: ['12.9" Display', '256GB Storage', '10-hour battery', 'Professional stylus', 'Keyboard support']
-    },
-    product4: {
-      id: 'product4',
-      name: 'Budget Smartphone',
-      description: 'Affordable smartphone with essential features. Great value for everyday use.',
-      price: '$299',
-      features: ['6.1" Display', '64GB Storage', 'Dual Camera', 'All-day battery']
-    },
-    product5: {
-      id: 'product5',
-      name: 'Mid-Range Smartphone',
-      description: 'Premium features at a great price. Excellent camera and performance.',
-      price: '$699',
-      features: ['6.5" Display', '128GB Storage', 'Triple Camera', 'Fast charging', '5G ready']
-    },
-    product6: {
-      id: 'product6',
-      name: 'Flagship Smartphone',
-      description: 'Top-of-the-line smartphone with cutting-edge technology and premium build.',
-      price: '$1299',
-      features: ['6.7" Display', '256GB Storage', 'Pro Camera System', 'Wireless charging', '5G', 'Premium materials']
-    },
-    product7: {
-      id: 'product7',
-      name: 'Entry-Level Gaming Laptop',
-      description: 'Affordable gaming laptop that handles popular games at medium settings.',
-      price: '$899',
-      features: ['15.6" Display', 'GTX 1650 GPU', '8GB RAM', '512GB SSD', '1080p Gaming']
-    },
-    product8: {
-      id: 'product8',
-      name: 'Mid-Range Gaming Laptop',
-      description: 'Powerful gaming laptop for smooth gameplay at high settings. Great for most games.',
-      price: '$1499',
-      features: ['15.6" 144Hz Display', 'RTX 3060 GPU', '16GB RAM', '1TB SSD', 'RGB Keyboard']
-    },
-    product9: {
-      id: 'product9',
-      name: 'High-End Gaming Laptop',
-      description: 'Premium gaming laptop with top-tier performance. Handles any game at max settings.',
-      price: '$2499',
-      features: ['17.3" 240Hz Display', 'RTX 4080 GPU', '32GB RAM', '2TB SSD', 'Mechanical Keyboard', 'Advanced cooling']
-    },
-    product10: {
-      id: 'product10',
-      name: 'Ultra-Portable Business Laptop',
-      description: 'Lightweight and thin laptop perfect for business travel. Long battery life.',
-      price: '$1299',
-      features: ['13.3" Display', 'Intel i7', '16GB RAM', '512GB SSD', '14-hour battery', '2.5 lbs']
-    },
-    product11: {
-      id: 'product11',
-      name: 'Performance Business Laptop',
-      description: 'Powerful workstation laptop for demanding business applications.',
-      price: '$1799',
-      features: ['15.6" Display', 'Intel i9', '32GB RAM', '1TB SSD', 'Dedicated GPU', 'Enterprise security']
-    },
-    product12: {
-      id: 'product12',
-      name: 'Balanced Business Laptop',
-      description: 'Perfect balance of portability and performance for modern professionals.',
-      price: '$1499',
-      features: ['14" Display', 'Intel i7', '16GB RAM', '512GB SSD', '10-hour battery', 'Premium build']
-    },
-    product13: {
-      id: 'product13',
-      name: 'Creative Laptop - Entry',
-      description: 'Solid laptop for photo editing and light video work. Good color accuracy.',
-      price: '$1299',
-      features: ['15.6" Color-Accurate Display', '16GB RAM', '512GB SSD', 'Dedicated GPU', 'Stylus support']
-    },
-    product14: {
-      id: 'product14',
-      name: 'Creative Laptop - Pro',
-      description: 'Professional-grade laptop for serious creative work. Excellent for video editing.',
-      price: '$2499',
-      features: ['16" 4K Display', '32GB RAM', '1TB SSD', 'RTX 3070 GPU', 'Color-calibrated', 'Touch screen']
-    },
-    product15: {
-      id: 'product15',
-      name: 'Creative Laptop - Studio',
-      description: 'Ultimate creative workstation. Handles 8K video editing and complex 3D work.',
-      price: '$3999',
-      features: ['17" 4K OLED Display', '64GB RAM', '2TB SSD', 'RTX 4090 GPU', 'Studio-grade color', 'Premium build']
-    },
-    product16: {
-      id: 'product16',
-      name: 'Budget Laptop',
-      description: 'Affordable laptop perfect for students and everyday tasks. Great value.',
-      price: '$499',
-      features: ['15.6" Display', '8GB RAM', '256GB SSD', 'All-day battery', 'Lightweight']
-    },
-    product17: {
-      id: 'product17',
-      name: 'Mid-Range Laptop',
-      description: 'Versatile laptop that handles work, entertainment, and light creative tasks.',
-      price: '$899',
-      features: ['15.6" Display', '16GB RAM', '512GB SSD', 'Fast processor', 'Good battery life']
-    },
-    product18: {
-      id: 'product18',
-      name: 'Premium General Use Laptop',
-      description: 'High-quality laptop with premium features for power users.',
-      price: '$1499',
-      features: ['15.6" Premium Display', '16GB RAM', '1TB SSD', 'Latest processor', 'Premium build quality']
-    },
-    product19: {
-      id: 'product19',
-      name: 'Budget Gaming Desktop',
-      description: 'Affordable gaming PC that runs most games smoothly at 1080p.',
-      price: '$999',
-      features: ['RTX 3060 GPU', '16GB RAM', '512GB SSD', 'Ryzen 5 CPU', 'RGB Lighting']
-    },
-    product20: {
-      id: 'product20',
-      name: 'High-Performance Gaming Desktop',
-      description: 'Powerful gaming PC for 1440p and 4K gaming. Handles any game with ease.',
-      price: '$2499',
-      features: ['RTX 4070 GPU', '32GB RAM', '1TB SSD', 'Ryzen 7 CPU', 'Liquid cooling', 'Premium case']
-    },
-    product21: {
-      id: 'product21',
-      name: 'Ultimate Gaming Desktop',
-      description: 'Top-tier gaming PC with the best components. Maximum performance for enthusiasts.',
-      price: '$3999',
-      features: ['RTX 4090 GPU', '64GB RAM', '2TB SSD', 'Ryzen 9 CPU', 'Custom liquid cooling', 'Premium RGB']
-    },
-    product22: {
-      id: 'product22',
-      name: 'Development Workstation',
-      description: 'Optimized for software development with powerful CPU and plenty of RAM.',
-      price: '$1999',
-      features: ['Ryzen 9 CPU', '64GB RAM', '2TB SSD', 'Multiple monitor support', 'Linux/Windows ready']
-    },
-    product23: {
-      id: 'product23',
-      name: '3D Rendering Workstation',
-      description: 'Professional workstation for 3D modeling, rendering, and animation.',
-      price: '$3499',
-      features: ['RTX 4080 GPU', '128GB RAM', '4TB SSD', 'Threadripper CPU', 'Professional GPU', 'Color-accurate monitors']
-    },
-    product24: {
-      id: 'product24',
-      name: 'AI/Data Science Workstation',
-      description: 'High-performance workstation optimized for machine learning and data science.',
-      price: '$4999',
-      features: ['Dual RTX 4090 GPUs', '128GB RAM', '4TB NVMe SSD', 'Threadripper Pro CPU', 'AI-optimized']
-    },
-    product25: {
-      id: 'product25',
-      name: 'Compact Home Office Desktop',
-      description: 'Small form factor PC perfect for home offices. Quiet and efficient.',
-      price: '$599',
-      features: ['Compact design', '8GB RAM', '256GB SSD', 'Integrated graphics', 'Quiet operation']
-    },
-    product26: {
-      id: 'product26',
-      name: 'Standard Home Office Desktop',
-      description: 'Reliable desktop for productivity and multitasking. Great for home offices.',
-      price: '$1099',
-      features: ['16GB RAM', '512GB SSD', 'Dedicated GPU', 'Fast processor', 'Multiple ports']
-    },
-    product27: {
-      id: 'product27',
-      name: 'Premium Home Office Desktop',
-      description: 'High-performance desktop for demanding home office tasks and multitasking.',
-      price: '$1899',
-      features: ['32GB RAM', '1TB SSD', 'Powerful GPU', 'Latest CPU', 'Premium build', 'Multiple monitor support']
     }
-  }
   }
 };
 
