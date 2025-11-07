@@ -5,212 +5,176 @@ export const productData = {
   questions: {
     q1: {
       id: 'q1',
-      text: 'What type of device are you looking for?',
+      text: 'How does your product move?',
       type: 'single', // single or multiple choice
       answers: [
         {
           id: 'a1',
-          text: 'Laptop',
+          text: 'Up and Down',
           nextQuestion: 'q2'
         },
         {
           id: 'a2',
-          text: 'Desktop Computer',
+          text: 'Side to Side',
           nextQuestion: 'q3'
         },
         {
           id: 'a3',
-          text: 'Tablet',
+          text: 'Shutters, Hinged Panels',
           nextQuestion: 'q4'
         },
         {
           id: 'a4',
-          text: 'Smartphone',
+          text: 'Moves inside a Skylight',
           nextQuestion: 'q5'
         }
       ]
     },
     q2: {
       id: 'q2',
-      text: 'What is your primary use case for the laptop?',
+      text: 'Is your product made of fabric, wood, or metal?',
       type: 'single',
       answers: [
         {
           id: 'a5',
-          text: 'Gaming',
+          text: 'Fabric',
           nextQuestion: 'q6'
         },
         {
           id: 'a6',
-          text: 'Business/Work',
+          text: 'Wood',
           nextQuestion: 'q7'
         },
         {
           id: 'a7',
-          text: 'Creative Work (Design, Video Editing)',
-          nextQuestion: 'q8'
-        },
-        {
-          id: 'a8',
-          text: 'General Use/Student',
-          nextQuestion: 'q9'
-        }
+          text: 'Metal',
+          productId: 'udMetal'
+        }        
       ]
     },
     q3: {
       id: 'q3',
-      text: 'What is your primary use case for the desktop?',
+      text: 'Is your product made of fabric or wood?',
       type: 'single',
       answers: [
         {
           id: 'a9',
-          text: 'Gaming',
-          nextQuestion: 'q10'
+          text: 'Fabric/Vinyl',
+          nextQuestion: 'q9'
         },
         {
           id: 'a10',
-          text: 'Workstation/Professional',
+          text: 'Wood',
           nextQuestion: 'q11'
-        },
-        {
-          id: 'a11',
-          text: 'Home Office',
-          nextQuestion: 'q12'
         }
       ]
     },
     q4: {
       id: 'q4',
-      text: 'What size tablet are you interested in?',
+      text: 'What material is your Shutter?',
       type: 'single',
       answers: [
         {
           id: 'a12',
-          text: 'Small (7-9 inches)',
-          productId: 'product1'
+          text: 'Vinyl',
+          nextQuestion: 'q13'
         },
         {
           id: 'a13',
-          text: 'Medium (10-11 inches)',
-          productId: 'product2'
+          text: 'Composite',
+          nextQuestion: 'q14'
         },
         {
           id: 'a14',
-          text: 'Large (12+ inches)',
-          productId: 'product3'
+          text: '100% Wood',
+          nextQuestion: 'q15'
         }
       ]
     },
     q5: {
       id: 'q5',
-      text: 'What is your budget range?',
+      text: 'Skylift Motorized',
       type: 'single',
       answers: [
         {
           id: 'a15',
-          text: 'Under $500',
-          productId: 'product4'
+          text: 'Skylift Manual',
+          nextQuestion: 'q16'
         },
         {
           id: 'a16',
-          text: '$500 - $1000',
-          productId: 'product5'
-        },
-        {
-          id: 'a17',
-          text: 'Over $1000',
-          productId: 'product6'
+          text: 'Simplicity Manual',
+          nextQuestion: 'q17'
         }
       ]
     },
     q6: {
       id: 'q6',
-      text: 'What is your budget for a gaming laptop?',
+      text: 'What does your shade most look like?',
       type: 'single',
       answers: [
         {
+            id: 'a17',
+            text: 'Honeycomb/Cellular Shades',
+            nextQuestion: 'q17a'
+        },
+        {
           id: 'a18',
-          text: 'Under $1000',
-          productId: 'product7'
+          text: 'Roller Shades',
+          nextQuestion: 'q18'
         },
         {
           id: 'a19',
-          text: '$1000 - $2000',
-          productId: 'product8'
+          text: 'Roman Shades',
+          nextQuestion: 'q19'
         },
         {
           id: 'a20',
-          text: 'Over $2000',
-          productId: 'product9'
+          text: 'Sheer Shades',
+          nextQuestion: 'q20'
+        },
+        {
+            id: 'a21',
+            text: 'Aria Fabric Blinds',
+            productId: 'ariaFabricBlinds'
         }
       ]
     },
     q7: {
       id: 'q7',
-      text: 'Do you need portability or performance?',
+      text: 'Wood Blinds',
       type: 'single',
-      answers: [
-        {
-          id: 'a21',
-          text: 'Portability (Lightweight, Long Battery)',
-          productId: 'product10'
-        },
+      answers: [        
         {
           id: 'a22',
-          text: 'Performance (Powerful CPU, More RAM)',
-          productId: 'product11'
+          text: 'Real Wood',
+          nextQuestion: 'q22'
         },
         {
           id: 'a23',
-          text: 'Balance of Both',
-          productId: 'product12'
-        }
-      ]
-    },
-    q8: {
-      id: 'q8',
-      text: 'What is your budget for creative work?',
-      type: 'single',
-      answers: [
-        {
-          id: 'a24',
-          text: 'Under $1500',
-          productId: 'product13'
-        },
-        {
-          id: 'a25',
-          text: '$1500 - $3000',
-          productId: 'product14'
-        },
-        {
-          id: 'a26',
-          text: 'Over $3000',
-          productId: 'product15'
+          text: 'Faux Wood',
+          nextQuestion: 'q23'
         }
       ]
     },
     q9: {
       id: 'q9',
-      text: 'What is your budget for a general use laptop?',
+      text: 'Fabri/Vinyl',
       type: 'single',
       answers: [
         {
           id: 'a27',
-          text: 'Under $600',
-          productId: 'product16'
+          text: 'Fabric has individual vanes',
+         nextQuestion: 'q24'
         },
         {
           id: 'a28',
-          text: '$600 - $1200',
-          productId: 'product17'
-        },
-        {
-          id: 'a29',
-          text: 'Over $1200',
-          productId: 'product18'
+          text: 'Fabric is a single pane',
+          nextQuestion: 'q25'
         }
       ]
     },
+    //reuse?
     q10: {
       id: 'q10',
       text: 'What is your budget for a gaming desktop?',
@@ -235,13 +199,13 @@ export const productData = {
     },
     q11: {
       id: 'q11',
-      text: 'What type of professional work?',
+      text: 'Wood',
       type: 'single',
       answers: [
         {
           id: 'a33',
-          text: 'Software Development',
-          productId: 'product22'
+          text: 'Does your product have large wood panels that slide on a track or Wood Vanes that hang from a track?',
+          a50: 'product22'
         },
         {
           id: 'a34',
@@ -276,9 +240,128 @@ export const productData = {
           productId: 'product27'
         }
       ]
-    }
+    },
+    q17a: {
+      id: 'q17a',
+      text: 'Does the fabric look similar to this image?',
+      type: 'single',
+      answers: [
+        {
+          id: 'a40',
+          text: 'I have Honeycomb Fabric',
+          productId: 'honeycombCellularShades'
+        },
+        {
+            id: 'a41',
+            text: 'I have Sonnette Fabric',
+            productId: 'sonnetteFabric'
+        }
+      ]
+    },
+    q18: {
+        id: 'q18',
+        text: 'Does the fabric look similar to the image?',
+        type: 'single',
+        answers: [
+            {
+                id: 'a42',
+                text: 'I have Roller/Screen Fabric',
+                productId: 'rollerScreenFabric'
+            },
+            {
+                id: 'a43',
+                text: 'I have Sonnette Fabric',
+                productId: 'sonnetteRollerShades'
+            },
+            {
+                id: 'a44',
+                text: 'I have Designer Banded Fabric',
+                productId: 'designerBandedFabric'
+            }
+        ]
+    },
+    q19: {
+        id: 'q19',
+        text: 'Does the fabric look similar to the image?',
+        type: 'single',
+        answers: [
+            {
+                id: 'a45',
+                text: 'I have Woven Wood Roman Shade',
+                productId: 'wovenWoodRomanShade'
+            },
+            {
+                id: 'a46',
+                text: 'I have Fabric Roman Shade',
+                productId: 'fabricRomanShade'
+            }
+        ]
+    },    
+    q20: {
+        id: 'q20',
+        text: 'Does the fabric look similar to the image?',
+        type: 'single',
+        answers: [
+            {
+                id: 'a47',
+                text: 'I have S-Shaped fabric vane between sheers',
+                productId: 'sShapedFabricVaneBetweenSheers'
+            },
+            {
+                id: 'a48',
+                text: 'I have one sheer panel with fabric on the front',
+                productId: 'pirSheerShades'
+            },
+            {
+                id: 'a49',  
+                text: 'I have a sheer that rolls through the bottom rail',
+                productId: 'designerBandedRollerShades'
+            }
+        ]
+    },   
+    q24: {
+      id: 'q24',
+      text: 'I have small vanes fabric or vinyl',
+      type: 'single',
+      answers: [
+        {
+          id: 'a39',
+          text: 'You have Vertical Blinds!',
+          productId: 'verticalBlinds'
+        }
+        ]
   },
   products: {
+    ariaFabricBlinds: {
+      id: 'ariaFabricBlinds',
+      name: 'Aria Fabric Blinds',
+      description: 'Great Choice!  You have Duette® and Applause Cellular Shades. Lightweight and translucent for diffusing sunlight into a beautiful glow.',
+      features: ['Sleek, modern look', 'Versatile option for any space']
+    },
+    honeycombCellularShades: {
+      id: 'honeycombCellularShades',
+      name: 'Honeycomb/Cellular Shades',
+      description: 'Great Choice!  You have Duette® and Applause Cellular Shades.  Year-round comfort. Beautiful natural light. Through stunning, energy-efficient, honeycomb shades.',
+      features: ['Year-round comfort', 'Beautiful natural light', 'Stunning, energy-efficient, honeycomb shades']
+    },
+    sonnetteFabric: {
+      id: 'sonnetteFabric',
+      name: 'Sonnette Fabric',  
+      description: 'Great Choice!  You have Sonnette® Roller Shades! A cellular shade and a roller shade, paired together. For a fresh take on style and energy efficiency.',
+      features: ['Sonnette Fabric']
+    },
+    verticalBlinds: {
+      id: 'verticalBlinds',
+      name: 'Vertical Blinds',
+      description: 'We offer a few types of Vertical products: Somner Vertical Blinds - Vinyl, fabric and aluminum styles in many colors and finishes. For vertical blinds that make a statement. Vertical Solutions® Vertical Blinds- Essential fabric and vinyl options with a minimalist design. So art and furniture can take center stage!',
+      features: ['Vertical Blinds']
+    },
+    udMetal: {
+      id: 'udMetal',
+      name: 'Modern Precious Metals® Mini Blinds',
+      description: 'Great Choice! You have Modern Precious Metals® Mini Blinds  Sleek aluminum slats.  A streamlined, durable aesthetic.  An appealing option for high-traffic homes.  ',
+      features: ['Aluminum slats', 'Streamlined, durable aesthetic', 'Appealing option for high-traffic homes']
+    },
     product1: {
       id: 'product1',
       name: 'Compact Tablet 8"',
@@ -468,6 +551,7 @@ export const productData = {
       price: '$1899',
       features: ['32GB RAM', '1TB SSD', 'Powerful GPU', 'Latest CPU', 'Premium build', 'Multiple monitor support']
     }
+  }
   }
 };
 
