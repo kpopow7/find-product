@@ -73,9 +73,23 @@ const ProductFinder = () => {
             <div className="success-icon">✓</div>
             <h2>We Found Your Perfect Product!</h2>
             <div className="product-card">
+              {foundProduct.imageUrl && (
+                <div className="product-image-container">
+                  <img 
+                    src={foundProduct.imageUrl} 
+                    alt={foundProduct.name}
+                    className="product-image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
               <h3>{foundProduct.name}</h3>
               <p className="product-description">{foundProduct.description}</p>
-              <div className="product-price">{foundProduct.price}</div>
+              {foundProduct.price && (
+                <div className="product-price">{foundProduct.price}</div>
+              )}
               <div className="product-features">
                 <h4>Key Features:</h4>
                 <ul>
@@ -132,6 +146,19 @@ const ProductFinder = () => {
         <div className="question-section">
           <h2 className="question-text">{currentQuestion.text}</h2>
           
+          {currentQuestion.imageUrl && (
+            <div className="question-image-container">
+              <img 
+                src={currentQuestion.imageUrl} 
+                alt={currentQuestion.text}
+                className="question-image"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+          )}
+          
           <div className="answers-container">
             {currentQuestion.answers.map((answer) => (
               <button
@@ -139,7 +166,17 @@ const ProductFinder = () => {
                 className="answer-button"
                 onClick={() => handleAnswerSelect(answer)}
               >
-                {answer.text}
+                {answer.imageUrl && (
+                  <img 
+                    src={answer.imageUrl} 
+                    alt={answer.text}
+                    className="answer-image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                )}
+                <span className="answer-text">{answer.text}</span>
               </button>
             ))}
           </div>
@@ -156,12 +193,28 @@ const ProductFinder = () => {
         <div className="answers-history">
           <h3>Your Answers:</h3>
           <div className="history-list">
-            {answers.map((answer, index) => (
-              <div key={index} className="history-item">
-                <span className="history-question">{answer.questionText}</span>
-                <span className="history-answer">→ {answer.answerText}</span>
-              </div>
-            ))}
+            {answers.map((answer, index) => {
+              const question = productData.questions[answer.questionId];
+              const answerData = question?.answers.find(a => a.id === answer.answerId);
+              return (
+                <div key={index} className="history-item">
+                  <span className="history-question">{answer.questionText}</span>
+                  <div className="history-answer-content">
+                    {answerData?.imageUrl && (
+                      <img 
+                        src={answerData.imageUrl} 
+                        alt={answer.answerText}
+                        className="history-answer-image"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                    )}
+                    <span className="history-answer">→ {answer.answerText}</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
