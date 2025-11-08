@@ -389,6 +389,27 @@ export const productData = {
         },
 },
   products: {
+    vinylShutters: {
+      id: 'vinylShutters',
+      name: 'Palm Beach™ Polysatin™ Vinyl Shutters',
+      description: 'Great Choice!You have Palm Beach™ Polysatin™ Vinyl Shutters! Crafted to take the heat and humidity. The perfect addition for comfortable, unfussy living.',
+      imageUrl: null,
+      features: ['Crafted to take the heat and humidity. The perfect addition for comfortable, unfussy living.']
+    },
+    compositeShutters: {
+      id: 'compositeShutters',
+      name: 'NewStyle® Composite Shutters',
+      description: 'Great Choice!You have NewStyle® Composite Shutters! The rich look of hardwood, with added strength. For hybrid shutters that can take wear and tear.',
+      imageUrl: null,
+      features: ['The rich look of hardwood, with added strength. For hybrid shutters that can take wear and tear.']
+    },
+    woodShutters: {
+      id: 'woodShutters',
+      name: 'Heritance® Wood Shutters',
+      description: 'Great Choice!You have Heritance® Wood Shutters! High-quality hardwood. Dovetail construction and unique finishes.',
+      imageUrl: null,
+      features: ['High-quality hardwood', 'Dovetail construction', 'Unique finishes']
+    },
     panelTrackBlinds: {
       id: 'panelTrackBlinds',
       name: 'Skyline® Panel-Track Blinds',
