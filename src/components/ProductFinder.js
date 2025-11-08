@@ -71,7 +71,7 @@ const ProductFinder = () => {
         <div className="finder-container">
           <div className="result-section">
             <div className="success-icon">✓</div>
-            <h2>We Found Your Perfect Product!</h2>
+            <h2>We Found Your Product!</h2>
             <div className="product-card">
               {foundProduct.imageUrl && (
                 <div className="product-image-container">

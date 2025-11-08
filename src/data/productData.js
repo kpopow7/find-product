@@ -70,13 +70,13 @@ export const productData = {
         {
           id: 'a9',
           text: 'Fabric/Vinyl',
-          imageUrl: null,
+          imageUrl: 'images/side_to_side_fabric.png',
           nextQuestion: 'q9'
         },
         {
           id: 'a10',
           text: 'Wood',
-          imageUrl: null,
+          imageUrl: 'images/side_to_side_wood.jpg',
           nextQuestion: 'q11'
         }
       ]
@@ -90,19 +90,19 @@ export const productData = {
         {
           id: 'a12',
           text: 'Vinyl',
-          imageUrl: null,
+          imageUrl: 'images/shutters_vinyl.jpg',
           productId: 'vinylShutters'
         },
         {
           id: 'a13',
           text: 'Composite',
-          imageUrl: null,
+          imageUrl: 'images/shutters_composite.jpg',
           productId: 'compositeShutters'
         },
         {
           id: 'a14',
           text: '100% Wood',
-          imageUrl: null,
+          imageUrl: 'images/shutters_wood.jpg',
           productId: 'woodShutters'
         }
       ]
@@ -116,19 +116,19 @@ export const productData = {
         {
             id: 'a15a',
             text: 'Skylift Motorized',
-            imageUrl: null,
+            imageUrl: 'images/skylift_motorized.png',
             productId: 'skyliftMotorized'
         },        
         {
           id: 'a15',
           text: 'Skylift Manual',
-          imageUrl: null,
+          imageUrl: 'images/skylift_manual.png',
           productId: 'manualSkylightShutters'
         },
         {
           id: 'a16',
           text: 'Simplicity Manual',
-          imageUrl: null,
+          imageUrl: 'images/skylight.jpg',
           productId: 'simplicitySkylightShutters'
         }
       ]
@@ -175,7 +175,7 @@ export const productData = {
       id: 'q7',
       text: 'Wood Blinds',
       type: 'single',
-      imageUrl: null,
+      imageUrl: 'images/woodBlinds_main.jpg',
       answers: [        
         {
           id: 'a22',
@@ -193,20 +193,20 @@ export const productData = {
     },
     q9: {
       id: 'q9',
-      text: 'Fabri/Vinyl',
+      text: 'Fabric/Vinyl',
       type: 'single',
       imageUrl: null,
       answers: [
         {
           id: 'a27',
           text: 'Fabric has individual vanes',
-          imageUrl: null,
+          imageUrl: 'images/side_to_side_ind_vanes.png',
          nextQuestion: 'q24'
         },
         {
           id: 'a28',
           text: 'Fabric is a single pane',
-          imageUrl: null,
+          imageUrl: 'images/side_to_side_single_panel.jpg',
           nextQuestion: 'q13'
         }
       ]
@@ -240,19 +240,19 @@ export const productData = {
             {
                 id: 'a53',
                 text: 'I have sheer drapery style fabric',
-                imageUrl: null,
+                imageUrl: 'images/side_to_side_sheer_drapery.jpg',
                 productId: 'luminetteFabric'
             },
             {
                 id: 'a54',
                 text: 'I have cellular honeycomb fabric',
-                imageUrl: null,
+                imageUrl: 'images/side_to_side_honeycomb.jpg',
                 productId: 'honeycombVertiglide'
             },
             {
                 id: 'a55',
                 text: 'I have woven wood drapery style fabric',
-                imageUrl: null,
+                imageUrl: 'images/side_to_side_woven.png',
                 productId: 'wovenWoodDraperyFabric'
             }
         ]
@@ -266,13 +266,13 @@ export const productData = {
         {
           id: 'a40',
           text: 'I have Honeycomb Fabric',
-          imageUrl: null,
+          imageUrl: 'images/up_down_fabric_honeycomb.jpg',
           productId: 'honeycombCellularShades'
         },
         {
             id: 'a41',
             text: 'I have Sonnette Fabric',
-            imageUrl: null,
+            imageUrl: 'images/up_down_fabric_sonnette.jpg',
             productId: 'sonnetteFabric'
         }
       ]
@@ -286,19 +286,19 @@ export const productData = {
             {
                 id: 'a42',
                 text: 'I have Roller/Screen Fabric',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_roller_screen.jpg',
                 productId: 'rollerScreenFabric'
             },
             {
                 id: 'a43',
                 text: 'I have Sonnette Fabric',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_sonnette.jpg',
                 productId: 'sonnetteFabric'
             },
             {
                 id: 'a44',
                 text: 'I have Designer Banded Fabric',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_banded.jpg',
                 productId: 'designerBandedRollerShades'
             }
         ]
@@ -312,13 +312,13 @@ export const productData = {
             {
                 id: 'a45',
                 text: 'I have Woven Wood Roman Shade',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_woven_wood.jpg',
                 productId: 'wovenWoodRomanShade'
             },
             {
                 id: 'a46',
                 text: 'I have Fabric Roman Shade',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_roman.jpg',
                 productId: 'fabricRomanShade'
             }
         ]
@@ -332,19 +332,19 @@ export const productData = {
             {
                 id: 'a47',
                 text: 'I have S-Shaped fabric vane between sheers',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_s_sheer.png',
                 productId: 'sshapedFabricVaneBetweenSheers'
             },
             {
                 id: 'a48',
                 text: 'I have one sheer panel with fabric on the front',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_front_sheer.png',
                 productId: 'pirSheerShades'
             },
             {
                 id: 'a49',  
                 text: 'I have a sheer that rolls through the bottom rail',
-                imageUrl: null,
+                imageUrl: 'images/up_down_fabric_banded.jpg',
                 productId: 'designerBandedRollerShades'
             }
         ]
@@ -358,13 +358,13 @@ export const productData = {
         {            
           id: 'a39',
           text: 'I have small vanes fabric or vinyl',
-          imageUrl: null,
+          imageUrl: 'images/side_to_side_ind_vanes.png',
           productId: 'verticalBlinds'
         },
         {
             id: 'a52',
             text: 'I have large vertical panels on a track',
-            imageUrl: null,
+            imageUrl: 'images/side_to_side_panel_track.png',
             productId: 'panelTrackBlinds'
         }
         ]
@@ -373,7 +373,7 @@ export const productData = {
         id: 'q25',
         text: 'Does your product look similar to the image below?',
         type: 'single',
-        imageUrl: null,
+        imageUrl: 'images/side_to_side_wood_large_panel.jpg',
         answers: [
             {
                 id: 'a50',
