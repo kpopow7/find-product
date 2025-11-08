@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { productData } from '../data/productData';
-import { initializeZendesk, openZendeskWidget, isZendeskAvailable } from '../utils/zendesk';
+import { initializeZendesk, openZendeskWidget } from '../utils/zendesk';
 import { ZENDESK_CONFIG } from '../config/zendesk';
 import './ProductFinder.css';
 
@@ -14,8 +14,15 @@ const ProductFinder = () => {
 
   // Initialize Zendesk widget on component mount
   useEffect(() => {
-    if (ZENDESK_CONFIG.enabled && ZENDESK_CONFIG.key && ZENDESK_CONFIG.key !== 'YOUR_ZENDESK_KEY') {
-      initializeZendesk(ZENDESK_CONFIG.key);
+    // Only initialize in browser environment
+    if (typeof window !== 'undefined') {
+      try {
+        if (ZENDESK_CONFIG.enabled && ZENDESK_CONFIG.key && ZENDESK_CONFIG.key !== 'YOUR_ZENDESK_KEY') {
+          initializeZendesk(ZENDESK_CONFIG.key);
+        }
+      } catch (error) {
+        console.warn('Error initializing Zendesk:', error);
+      }
     }
   }, []);
 

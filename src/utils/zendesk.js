@@ -7,6 +7,11 @@
 
 // Initialize Zendesk widget (call this once when app loads)
 export const initializeZendesk = (zendeskKey) => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined' || typeof document === 'undefined') {
+    return;
+  }
+
   if (window.zE) {
     // Widget already initialized
     return;
@@ -14,17 +19,24 @@ export const initializeZendesk = (zendeskKey) => {
 
   // Add Zendesk script if not already present
   if (!document.getElementById('ze-snippet')) {
-    const script = document.createElement('script');
-    script.id = 'ze-snippet';
-    script.src = `https://static.zdassets.com/ekr/snippet.js?key=${zendeskKey}`;
-    script.async = true;
-    document.body.appendChild(script);
+    try {
+      const script = document.createElement('script');
+      script.id = 'ze-snippet';
+      script.src = `https://static.zdassets.com/ekr/snippet.js?key=${zendeskKey}`;
+      script.async = true;
+      script.onerror = () => {
+        console.warn('Failed to load Zendesk widget script');
+      };
+      document.body.appendChild(script);
+    } catch (error) {
+      console.warn('Error initializing Zendesk widget:', error);
+    }
   }
 };
 
 // Open Zendesk widget with product context
 export const openZendeskWidget = (product) => {
-  if (!window.zE) {
+  if (typeof window === 'undefined' || !window.zE) {
     console.warn('Zendesk widget not initialized. Please call initializeZendesk first.');
     return;
   }
