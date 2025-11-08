@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { productData } from '../data/productData';
-import { initializeZendesk, openZendeskWidget } from '../utils/zendesk';
-import { ZENDESK_CONFIG } from '../config/zendesk';
 import './ProductFinder.css';
 
 const ProductFinder = () => {
@@ -11,27 +9,6 @@ const ProductFinder = () => {
   const [showResult, setShowResult] = useState(false);
 
   const currentQuestion = productData.questions[currentQuestionId];
-
-  // Initialize Zendesk widget on component mount
-  useEffect(() => {
-    // Only initialize in browser environment
-    if (typeof window !== 'undefined') {
-      try {
-        if (ZENDESK_CONFIG.enabled && ZENDESK_CONFIG.key && ZENDESK_CONFIG.key !== 'YOUR_ZENDESK_KEY') {
-          initializeZendesk(ZENDESK_CONFIG.key);
-        }
-      } catch (error) {
-        console.warn('Error initializing Zendesk:', error);
-      }
-    }
-  }, []);
-
-  // Handle opening Zendesk widget with product context
-  const handleAskQuestion = () => {
-    if (foundProduct) {
-      openZendeskWidget(foundProduct);
-    }
-  };
 
   const handleAnswerSelect = (answer) => {
     const newAnswer = {
@@ -123,11 +100,6 @@ const ProductFinder = () => {
               </div>
             </div>
             <div className="action-buttons">
-              {ZENDESK_CONFIG.enabled && ZENDESK_CONFIG.key && ZENDESK_CONFIG.key !== 'YOUR_ZENDESK_KEY' && (
-                <button onClick={handleAskQuestion} className="btn btn-zendesk">
-                  💬 Ask Questions About This Product
-                </button>
-              )}
               <button onClick={handleRestart} className="btn btn-primary">
                 Start Over
               </button>

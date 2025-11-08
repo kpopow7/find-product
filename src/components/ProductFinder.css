@@ -182,18 +182,6 @@
   background: #e0e0e0;
 }
 
-.btn-zendesk {
-  background: linear-gradient(135deg, #03363d 0%, #0a5c6a 100%);
-  color: white;
-  border: none;
-}
-
-.btn-zendesk:hover {
-  background: linear-gradient(135deg, #0a5c6a 0%, #03363d 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(3, 54, 61, 0.4);
-}
-
 /* Answers History */
 .answers-history {
   margin-top: 3rem;
@@ -428,15 +416,10 @@
 
   .action-buttons {
     flex-direction: column;
-    gap: 0.75rem;
   }
 
   .btn {
     width: 100%;
-  }
-
-  .btn-zendesk {
-    order: -1; /* Show Zendesk button first on mobile */
   }
 }
 

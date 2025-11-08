@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -7,14 +6,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-
-// Get environment variables for DefinePlugin
-const envKeys = Object.keys(process.env).reduce((prev, next) => {
-  if (next.startsWith('REACT_APP_')) {
-    prev[`process.env.${next}`] = JSON.stringify(process.env[next]);
-  }
-  return prev;
-}, {});
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
@@ -88,7 +79,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.DefinePlugin(envKeys),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
       inject: true,
